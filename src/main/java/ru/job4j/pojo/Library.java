@@ -22,7 +22,7 @@ public class Library {
         }
         System.out.println("print only Clean cod");
         for (int i = 0; i < books.length; i++) {
-            if (books[i].getName() == "Clean cod") {
+            if (books[i].getName().equals("Clean cod")) {
             System.out.println(books[i].getName() + " - " + books[i].getPages());
             }
         }
