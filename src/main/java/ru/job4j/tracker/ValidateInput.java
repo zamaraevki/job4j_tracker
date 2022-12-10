@@ -1,5 +1,7 @@
 package ru.job4j.tracker;
 
+import java.util.Scanner;
+
 public class ValidateInput extends ConsoleInput {
 
     @Override
