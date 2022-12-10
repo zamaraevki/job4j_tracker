@@ -3,17 +3,17 @@ package ru.job4j.ex;
 public class UserStore {
 
     public static User findUser(User[] users, String login) throws UserNotFoundException {
-        int rsl = -1;
-        for (int i = 0; i < users.length; i++) {
-            if (users[i].getUsername().equals(login)) {
-                rsl = i;
+        User rsl = null;
+        for (User user : users) {
+            if (user.getUsername().equals(login)) {
+                rsl = user;
                 break;
             }
         }
-        if (rsl == -1) {
+        if (rsl == null) {
             throw new UserNotFoundException("User not found");
         }
-        return rsl != -1 ? users[rsl] : null;
+        return rsl;
     }
 
     public static boolean validate(User user) throws UserInvalidException {
@@ -28,7 +28,7 @@ public class UserStore {
                 new User("Petr Arsentev", true)
         };
         try {
-            User user = findUser(users, "Petr Arsentev");
+            User user = findUser(users, "Petr Arsente");
             if (validate(user)) {
                 System.out.println("This user has an access");
             }
