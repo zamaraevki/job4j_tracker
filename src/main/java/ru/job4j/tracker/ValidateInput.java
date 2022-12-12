@@ -2,7 +2,7 @@ package ru.job4j.tracker;
 
 import java.util.Scanner;
 
-public class ValidateInput extends ConsoleInput {
+public class ValidateInput implements Input {
 
     private final Output out;
     private final Input in;
