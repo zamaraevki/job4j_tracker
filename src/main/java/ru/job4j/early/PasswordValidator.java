@@ -43,9 +43,9 @@ public class PasswordValidator {
         if (!digit) {
             throw new IllegalArgumentException("Password should contain at least one figure");
         }
-        String[] temp = {"qwerty", "password", "12345", "admin", "user"};
-        for (int i = 0; i < temp.length; i++) {
-            if (password.toLowerCase().indexOf(temp[i]) != -1) {
+        String[] temps = {"qwerty", "password", "12345", "admin", "user"};
+        for (String temp : temps) {
+            if (password.toLowerCase().contains(temp)) {
                 throw new IllegalArgumentException(
                         "Password shouldn't contain substrings: qwerty, 12345, password, admin, user");
             }
