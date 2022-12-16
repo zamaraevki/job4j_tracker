@@ -1,7 +1,6 @@
 package ru.job4j.early;
 
 import static java.lang.Character.isDigit;
-import static java.lang.Character.toLowerCase;
 
 public class PasswordValidator {
 
