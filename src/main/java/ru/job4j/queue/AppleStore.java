@@ -13,14 +13,14 @@ public class AppleStore {
     }
 
     public String getLastHappyCustomer() {
-        for (int i = count; 1 < i; i--) {
+        for (int i = 1; i < count; i++) {
             queue.poll();
         }
         return queue.element().name();
     }
 
     public String getLastUpsetCustomer() {
-        for (int i = count; 0 < i; i--) {
+        for (int i = 0; i < count; i++) {
             queue.poll();
         }
         return queue.element().name();
