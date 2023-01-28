@@ -35,7 +35,7 @@ public class BankService {
     /**
      * Метод добавляет пользователя из системы по номеру паспорта
      * @param passport номер паспорта удаляемого пользователя
-     * @return возвращает true если удаление прошло успешно
+     * @return возвращает true если удаление прошло успешно и false если пользователь не найден.
      */
     public boolean deleteUser(String passport) {
         return users.remove(new User(passport, "")) != null;
@@ -95,6 +95,7 @@ public class BankService {
      * @param destRequisite счет пользователя на который перводят
      * @param amount сумма перевода
      * @return возвращает true если перевод прошел успешно
+     * и false если пользователь не найден или недостаточно денег на счете.
      */
     public boolean transferMoney(String srcPassport, String srcRequisite,
                                  String destPassport, String destRequisite, double amount) {
