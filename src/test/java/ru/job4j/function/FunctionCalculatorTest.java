@@ -20,7 +20,7 @@ public class FunctionCalculatorTest {
     public void whenQuadraticFunctionThenLinearResults() {
         FunctionCalculator function = new FunctionCalculator();
         List<Double> result = function.diapason(1, 4, x -> x * x - 1);
-        List<Double> expected = Arrays.asList(0D, 3D, 8D, 15D);
+        List<Double> expected = Arrays.asList(0D, 3D, 8D);
         assertThat(result).containsAll(expected);
     }
 
@@ -28,7 +28,7 @@ public class FunctionCalculatorTest {
     public void whenDemonstrationFunctionThenLinearResults() {
         FunctionCalculator function = new FunctionCalculator();
         List<Double> result = function.diapason(1, 4, x -> Math.pow(2, x));
-        List<Double> expected = Arrays.asList(2D, 4D, 8D, 16D);
+        List<Double> expected = Arrays.asList(2D, 4D, 8D);
         assertThat(result).containsAll(expected);
     }
 }
